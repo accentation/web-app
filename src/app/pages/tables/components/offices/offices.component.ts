@@ -38,16 +38,6 @@ export class Offices implements OnInit {
         return a.city.length;
     }
 
-    getUserClick() {
-      this.service.getUserFromService().subscribe(
-        datosRecibidos => {
-          this.data = datosRecibidos;
-          //this.route.navigate(['house-list']);
-          //console.log(data)
-          //alert("GET RICIBIDO MUY BIEN");
-        }
-      );
-  }
 
   getOfficeClick(page: number, size: number) {
     console.log(size);
