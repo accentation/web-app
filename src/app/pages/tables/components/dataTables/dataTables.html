@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-sm-2">
                     <label class="label-control">Rows on page</label>
-                    <select class="form-control input-sm" #selector [(ngModel)]="rowsOnPage" (change)="getOfficeClick(clientsData.number,  selector.value)">
+                    <select class="form-control input-sm" #selector [(ngModel)]="rowsOnPage" (change)="getClientsClick(clientsData.number,  selector.value)">
                     <option selected value="5">5</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
