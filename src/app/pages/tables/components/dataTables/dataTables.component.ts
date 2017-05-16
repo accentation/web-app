@@ -11,10 +11,12 @@ import { DataTablesService } from './dataTables.service';
 export class DataTables {
 
     data;
+    clientsData;
     filterQuery = "";
-    rowsOnPage = 10;
+    rowsOnPage = 5;
     sortBy = "email";
     sortOrder = "asc";
+    arrayPages: Array<number> = [];
     /*model = new Login('1', 'usuario', 'dad@faf.com', '1234');
     user : Login;*/
     constructor(private service: DataTablesService) {
@@ -34,27 +36,22 @@ export class DataTables {
         return a.city.length;
     }
 
-    getUserClick() {
-      this.service.getUserFromService().subscribe(
-        datosRecibidos => {
-          this.data = datosRecibidos;
-          //this.route.navigate(['house-list']);
-          //console.log(data)
-          alert("GET RICIBIDO MUY BIEN");
+    getClientsClick(page: number, size: number) {
+        this.service.getClientsFromService(page, size).subscribe(
+        clientsReceived => {
+          this.clientsData = clientsReceived;
+          this.data = clientsReceived.content;
+          this.arrayPages = new Array(clientsReceived.totalPages);
+       
         }
       );
   }
 
-  getOfficeClick() {
-      this.service.getOfficesFromService().subscribe(
-        datosRecibidos => {
-          this.data = datosRecibidos.content;
-          //this.route.navigate(['house-list']);
-          //console.log(data)
-          alert("GET RICIBIDO MUY BIEN");
-        }
-      );
+ngOnInit(){
+      this.getClientsClick(0,5)
   }
   
-}
+  }
+  
+
 

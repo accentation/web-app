@@ -234,7 +234,7 @@ export const PAGES_MENU = [
             path: 'datatables',
             data: {
               menu: {
-                title: 'Data Tables',
+                title: 'Clients',
               }
             }
           },

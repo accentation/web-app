@@ -5,7 +5,6 @@ import { NgaModule } from '../../theme/nga.module';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { DataTableModule } from "angular2-datatable";
 import { HttpModule } from "@angular/http";
-import { DataFilterPipe } from './components/dataTables/data-filter.pipe';
 import { HotTable, HotTableModule } from 'ng2-handsontable';
 
 import { routing } from './tables.routing';
@@ -22,6 +21,7 @@ import { SmartTables } from './components/smartTables/smartTables.component';
 import { SmartTablesService } from './components/smartTables/smartTables.service';
 import { DataTables } from './components/dataTables/dataTables.component';
 import { DataTablesService } from './components/dataTables/dataTables.service';
+import { DataFilterPipe } from './data-filter.pipe';
 
 import { HotTablesComponent } from './components/hotTables/hotTables.component';
 import { HandsontableSectionComponent } from './components/hotTables/handsontable-section';
@@ -57,7 +57,6 @@ import { officeService } from './components/offices/offices.service';
     ResponsiveTable,
     SmartTables,
     DataTables,
-    DataFilterPipe,
     HotTablesComponent,
     HandsontableSectionComponent,
     BasicDemoComponent,
@@ -66,7 +65,8 @@ import { officeService } from './components/offices/offices.service';
     ScienceDemoComponent,
     SportDemoComponent,
     SheetDemoComponent,
-    Offices
+    Offices,
+    DataFilterPipe
 
   ],
   providers: [
