@@ -40,18 +40,18 @@ export class Offices implements OnInit {
           this.data = datosRecibidos;
           //this.route.navigate(['house-list']);
           //console.log(data)
-          alert("GET RICIBIDO MUY BIEN");
+          //alert("GET RICIBIDO MUY BIEN");
         }
       );
   }
 
   getOfficeClick() {
       this.service.getOfficesFromService().subscribe(
-        datosRecibidos => {
-          this.data = datosRecibidos.content;
+        office => {
+          this.data = office.content;
           //this.route.navigate(['house-list']);
           //console.log(data)
-          alert("GET RICIBIDO MUY BIEN");
+          //alert("GET RICIBIDO MUY BIEN");
         }
       );
   }
