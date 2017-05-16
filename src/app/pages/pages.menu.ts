@@ -238,14 +238,14 @@ export const PAGES_MENU = [
               }
             }
           },
-          /*{
-             path: 'hottables',
+          {
+             path: 'offices',
              data: {
                menu: {
-                 title: 'Hot Tables',
+                 title: 'Offices',
                }
              }
-           }*/
+           }
         ]
       },
       /*{

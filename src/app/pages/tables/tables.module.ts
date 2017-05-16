@@ -32,6 +32,9 @@ import { ScienceDemoComponent } from './components/hotTables/handsontable/scienc
 import { SportDemoComponent } from './components/hotTables/handsontable/sport-demo';
 import { AdvancedDemoComponent } from './components/hotTables/handsontable/advanced-demo';
 
+import { Offices } from './components/offices/offices.component';
+import { officeService } from './components/offices/offices.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -62,12 +65,15 @@ import { AdvancedDemoComponent } from './components/hotTables/handsontable/advan
     FinanceDemoComponent,
     ScienceDemoComponent,
     SportDemoComponent,
-    SheetDemoComponent
+    SheetDemoComponent,
+    Offices
+
   ],
   providers: [
     BasicTablesService,
     SmartTablesService,
-    DataTablesService
+    DataTablesService,
+    officeService
   ]
 })
 export class TablesModule {

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { DataTablesService } from './dataTables.service';
+import { officeService } from './offices.service';
 
 
 
 @Component({
-  selector: 'data-tables',
-  templateUrl: './dataTables.html',
+  selector: 'offices',
+  templateUrl: './offices.html',
   styleUrls: ['./dataTables.scss']
 })
-export class DataTables {
+export class Offices implements OnInit {
 
     data;
     filterQuery = "";
@@ -17,7 +17,7 @@ export class DataTables {
     sortOrder = "asc";
     /*model = new Login('1', 'usuario', 'dad@faf.com', '1234');
     user : Login;*/
-    constructor(private service: DataTablesService) {
+    constructor(private service: officeService) {
         
     /*this.service.getData().then((data) => {
       this.data = data;
@@ -56,5 +56,12 @@ export class DataTables {
       );
   }
   
+
+  ngOnInit(){
+
+      this.getOfficeClick()
+  }
+
+
 }
 

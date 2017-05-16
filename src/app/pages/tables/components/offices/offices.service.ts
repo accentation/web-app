@@ -9,7 +9,7 @@ import 'rxjs/add/operator/catch';
 
 
 @Injectable()
-export class DataTablesService {
+export class officeService {
 
   
 constructor(private http: Http) { }
