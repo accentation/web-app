@@ -11,10 +11,14 @@ import { officeService } from './offices.service';
 export class Offices implements OnInit {
 
     data;
+    officeData;
     filterQuery = "";
-    rowsOnPage = 10;
+    rowsOnPage = 5;
     sortBy = "email";
     sortOrder = "asc";
+    arrayPages: Array<number> = [];
+   
+
     /*model = new Login('1', 'usuario', 'dad@faf.com', '1234');
     user : Login;*/
     constructor(private service: officeService) {
@@ -22,7 +26,7 @@ export class Offices implements OnInit {
     /*this.service.getData().then((data) => {
       this.data = data;
     });*/
-    
+ 
 
   }
 
@@ -45,10 +49,13 @@ export class Offices implements OnInit {
       );
   }
 
-  getOfficeClick() {
-      this.service.getOfficesFromService().subscribe(
+  getOfficeClick(page: number, size: number) {
+    console.log(size);
+      this.service.getOfficesFromService(page, size).subscribe(
         office => {
+          this.officeData = office;
           this.data = office.content;
+          this.arrayPages = new Array(office.totalPages);
           //this.route.navigate(['house-list']);
           //console.log(data)
           //alert("GET RICIBIDO MUY BIEN");
@@ -58,9 +65,9 @@ export class Offices implements OnInit {
   
 
   ngOnInit(){
-
-      this.getOfficeClick()
+      this.getOfficeClick(0,5)
   }
+
 
 
 }
