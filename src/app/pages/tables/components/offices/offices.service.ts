@@ -17,15 +17,15 @@ constructor(private http: Http) { }
   
   //SERVICIO PARA LOS DATOS DE LA TABLA
     getUserFromService(): Observable<any> {
-        return this.http.get('http://jsonplaceholder.typicode.com/posts')
+        return this.http.get('http://192.168.1.240:8000/api/clients')
                     .map( (res: Response) => res.json())
                     .catch( (error: any) => Observable.throw(error.json().error || 'Server error'));
 
     }
 
     //SERVICIO PARA LOS DATOS DE LAS OFICINAS
-    getOfficesFromService(): Observable<any> {
-        return this.http.get('http://192.168.1.240:8081/offices/?page=2&size=1')
+    getOfficesFromService(page:number, size:number): Observable<any> {
+        return this.http.get('http://192.168.1.240:8000/api/offices/?page='+page+'&size='+size)
                     .map( (res: Response) => res.json())
                     .catch( (error: any) => Observable.throw(error.json().error || 'Server error'));
                         //return res.json() 
