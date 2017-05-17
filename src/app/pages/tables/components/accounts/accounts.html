@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-sm-2">
                     <label class="label-control">Rows on page</label>
-                    <select class="form-control input-sm" #selector [(ngModel)]="rowsOnPage" (change)="getAccountsClick(data.number,  selector.value)">
+                    <select class="form-control input-sm" #selector [(ngModel)]="rowsOnPage" (change)="getAccountsClick(data.number,  selector.value, 1)">
                     <option selected value="5">5</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
@@ -94,7 +94,7 @@
                 </li>
                 <!----><li *ngFor="let test of arrayPages; let index = index" class="ng2-smart-page-item page-item">
                   <!---->
-                  <!----><a _ngcontent-c6="" class="ng2-smart-page-link page-link" (click)="getAccountsClick(index,data.size)">{{index+1}}</a>
+                  <!----><a _ngcontent-c6="" class="ng2-smart-page-link page-link" (click)="getAccountsClick(index,data.size,1)">{{index+1}}</a>
                 </li>
 
                 <li _ngcontent-c6="" class="ng2-smart-page-item page-item">

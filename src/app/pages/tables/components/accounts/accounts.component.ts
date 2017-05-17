@@ -57,9 +57,10 @@ export class Accounts implements OnInit {
   }
   
 
-  ngOnInit(){
+  ngOnInit(){ 
     
-    this.route.params.switchMap((params: Params) => this.service
+    this.route.params.switchMap((params: Params) => 
+      this.service
     .getAccountsFromService(0, 5, +params['officeID'])).subscribe(
         account => {
           this.data = account.content;
