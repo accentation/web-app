@@ -35,6 +35,10 @@ import { AdvancedDemoComponent } from './components/hotTables/handsontable/advan
 import { Offices } from './components/offices/offices.component';
 import { officeService } from './components/offices/offices.service';
 
+import { Accounts } from './components/accounts/accounts.component';
+import { accountsService } from './components/accounts/accounts.service';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -66,14 +70,16 @@ import { officeService } from './components/offices/offices.service';
     SportDemoComponent,
     SheetDemoComponent,
     Offices,
-    DataFilterPipe
+    DataFilterPipe,
+    Accounts
 
   ],
   providers: [
     BasicTablesService,
     SmartTablesService,
     DataTablesService,
-    officeService
+    officeService,
+    accountsService
   ]
 })
 export class TablesModule {

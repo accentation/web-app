@@ -6,6 +6,7 @@ import { SmartTables } from './components/smartTables/smartTables.component';
 import { DataTables } from './components/dataTables/dataTables.component';
 import { HotTablesComponent } from './components/hotTables/hotTables.component';
 import { Offices } from './components/offices/offices.component';
+import { Accounts } from './components/accounts/accounts.component';
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
@@ -17,7 +18,10 @@ const routes: Routes = [
       { path: 'smarttables', component: SmartTables },
       { path: 'datatables', component: DataTables },
       { path: 'hottables', component: HotTablesComponent },
-      { path: 'offices', component: Offices }
+      { path: 'offices', component: Offices },
+      { path: 'accounts/:officeID', component: Accounts }
+
+
     ]
   }
 ];
