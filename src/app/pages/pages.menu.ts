@@ -14,36 +14,7 @@ export const PAGES_MENU = [
           }
         }
       },
-      {
-        path: '',
-        data: {
-          menu: {
-            title: 'Search Engine',
-            icon: 'ion-document',
-            selected: false,
-            expanded: false,
-            order: 650,
-          }
-        },
-        children: [
-          {
-            path: ['/login'],
-            data: {
-              menu: {
-                title: 'Options'
-              }
-            }
-          },
-          /*{
-            path: ['/register'],
-            data: {
-              menu: {
-                title: 'general.menu.register'
-              }
-            }
-          }*/
-        ]
-      },
+      
      /* {
         path: 'editors',
         data: {
