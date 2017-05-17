@@ -48,7 +48,7 @@ export class Accounts implements OnInit {
         account => {
           this.data = account.content;
           this.arrayPages = new Array(account.totalPages);
-
+          console.log(account);
           //this.route.navigate(['house-list']);
           //console.log(data)
           //alert("GET RICIBIDO MUY BIEN");
@@ -58,6 +58,8 @@ export class Accounts implements OnInit {
   
 
   ngOnInit(){ 
+
+    this.officeID = +this.route.snapshot.params['officeID'];
     
     this.route.params.switchMap((params: Params) => 
       this.service
